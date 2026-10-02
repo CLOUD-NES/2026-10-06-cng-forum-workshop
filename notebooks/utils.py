@@ -1,5 +1,6 @@
 import os
 
+import icechunk
 import netCDF4
 import rasterio
 
@@ -12,7 +13,7 @@ BUCKET_URI = f"s3://{BUCKET}"
 
 # Set prefix where the current user can write to
 USER_NAME = os.getenv("JUPYTERHUB_USER") or os.getenv("USER")
-USER_PREFIX_URI = f"{BUCKET}/users/{USER_NAME}"
+USER_PREFIX_URI = f"{BUCKET_URI}/users/{USER_NAME}"
 
 
 def https_url(urlpath: str) -> str:
@@ -69,3 +70,34 @@ def print_netcdf_info(urlpath: str) -> None:
                 f" * {name}: dtype={var.dtype}, dims={var.dimensions}, shape={var.shape}, "
                 f"chunking={var.chunking()}, filters={var.filters()}"
             )
+
+
+def icechunk_repo(urlpath: str) -> icechunk.Repository:
+    """Open (or create) an Icechunk repository, allowing virtual chunks from the source bucket."""
+    bucket, _, prefix = urlpath.removeprefix("s3://").partition("/")
+    region = os.getenv("AWS_REGION")
+    storage = icechunk.s3_storage(
+        bucket=bucket,
+        prefix=prefix,
+        endpoint_url=ENDPOINT_URL,
+        region=region,
+        force_path_style=True,
+        from_env=True,
+    )
+    config = icechunk.RepositoryConfig.default()
+    config.set_virtual_chunk_container(
+        icechunk.VirtualChunkContainer(
+            f"s3://{bucket}/",
+            icechunk.s3_store(
+                region=region, 
+                endpoint_url=ENDPOINT_URL, 
+                force_path_style=True
+            ),
+        )
+    )
+    credentials = icechunk.containers_credentials(
+        {f"s3://{bucket}/": icechunk.s3_credentials(anonymous=True)}
+    )
+    return icechunk.Repository.open_or_create(
+        storage, config, authorize_virtual_chunk_access=credentials
+    )
