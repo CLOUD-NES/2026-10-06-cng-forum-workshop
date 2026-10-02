@@ -30,6 +30,11 @@ def gdal_env(**kwargs) -> rasterio.Env:
     )
 
 
+def vsis3(urlpath: str) -> str:
+    """Convert s3://bucket/key to the GDAL virtual file system path /vsis3/bucket/key."""
+    return f"/vsis3/{urlpath.removeprefix('s3://')}"
+
+
 def print_raster_info(urlpath: str) -> None:
     """Print raster information for a file."""
     urlpath = urlpath if urlpath.startswith("s3://") else f"s3://{urlpath}"
