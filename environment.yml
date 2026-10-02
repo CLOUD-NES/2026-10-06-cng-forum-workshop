@@ -1,0 +1,20 @@
+name: cng-forum-workshop
+channels:
+  - conda-forge
+dependencies:
+  - dask
+  - jupyter-server-proxy
+  - fsspec
+  - icechunk
+  - nbgitpuller
+  - netcdf4
+  - numpy
+  - obstore
+  - pandas
+  - rasterio
+  - scipy
+  - virtualizarr
+  - xarray
+  - pip
+  - pip:
+    - cloudgeometer
