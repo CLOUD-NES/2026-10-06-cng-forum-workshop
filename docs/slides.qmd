@@ -1,0 +1,84 @@
+---
+title: Building and Benchmarking Cloud-Optimized Geospatial Raster and Tensor Datasets
+# subtitle: Towards a Cloud-Native Research Community in the Netherlands.
+format:
+  revealjs:
+    theme: serif
+    slide-number: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    footer: '[Workshop @ CNG Forum 2026](https://2026.cloudnativegeo.org)'
+    transition: slide
+    css: styles.css
+    title-slide-attributes:
+      data-background-image: 'fig/front-cover.jpg' # Photo by [sebastiaan stam](https://unsplash.com/@sebastiaanstam) on [Unsplash](https://unsplash.com/photos/white-and-blue-glass-window-xmclYRPxR1w)
+      data-background-position: center
+      data-background-size: cover
+      data-background-opacity: 40%
+author:
+  - name: Francesco Nattino
+    email: f.nattino@esciencecenter.nl
+    affiliations: '[Netherlands eScience Center](https://www.esciencecenter.nl/)'
+    orcid: 0000-0003-3286-0139
+date: 2026-10-06
+---
+
+## Cloud-native
+
+- More than just "put it in a bucket".
+- Formats designed for local filesystems often perform poorly in the cloud.
+- Key difference: data is accessed via HTTP range requests → latency, not throughput, is often the bottleneck.
+
+## This workshop
+
+Starting from real-world datasets, we'll try to answer:
+
+- *How do I produce cloud-optimized datasets well?*
+- *How do I know they are actually better?*
+
+## In practice
+
+::: {.incremental}
+* Explore two raster datasets and one tensor dataset in their original formats.
+* Convert them to cloud-optimized formats (COG and Zarr) with different configurations, and upload them to an object store.
+* Benchmark them against the original formats across different access patterns.
+* Publish the converted datasets as a STAC catalog.
+:::
+
+## {.center .centered}
+
+CLOUD-NES aims to investigate and promote cloud-native research data practices in the Natural and Engineering Sciences (NES).
+
+::: {.r-hstack style="gap: 40px;"}
+![](fig/ut-itc-logo.png){height=80}
+
+![](fig/escience-center-logo.png){height=80}
+
+![](fig/surf-logo.png){height=80}
+
+![](fig/knmi-logo.jpg){height=80}
+:::
+
+[`cloudnes.org`](https://cloudnes.org){preview-link="false"}
+
+::: {.footer style="max-width: 80%; left: 0; right: 0;"}
+The project "CLOUD-NES" with file number ICT.001.TDCC.016 of the research programme NWO Thematic Digital Competence Centers (TDCCs) 2023-2 is financed by the Dutch Research Council (NWO).
+:::
+
+## Infrastructure for today
+
+:::: {.columns .centered}
+
+::: {.column .centered width="49%"}
+![](fig/s3-logo.png){height=200}
+
+Object store
+:::
+
+::: {.column .centered width="49%"}
+![](fig/jupyter-logo.png){height=200}
+
+JupyterHub
+:::
+::::
