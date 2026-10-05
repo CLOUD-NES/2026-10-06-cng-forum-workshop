@@ -82,3 +82,9 @@ Object store
 JupyterHub
 :::
 ::::
+
+## {.center .centered}
+
+Collaborative document:
+
+[`edu.nl/wvntr`](https://edu.nl/wvntr){preview-link="false" style="font-size: 1.5em;"}
