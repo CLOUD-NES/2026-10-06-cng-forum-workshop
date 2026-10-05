@@ -1,4 +1,4 @@
-# Keep the hub-X.Y.Z tag in sync with the hub image version 
+# Keep the hub-X.Y.Z tag in sync with the hub image version
 FROM quay.io/jupyter/scipy-notebook:hub-6.0.1
 
 COPY --chown=${NB_UID}:${NB_GID} environment.yml /tmp/environment.yml
