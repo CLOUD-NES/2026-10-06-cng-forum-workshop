@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Workshop local conversion output
+notebooks/out/
+
+# Data folder
+data/
