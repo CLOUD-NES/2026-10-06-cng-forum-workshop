@@ -6,6 +6,7 @@ dependencies:
   - jupyter-server-proxy
   - fsspec
   - icechunk
+  - matplotlib
   - nbgitpuller
   - netcdf4
   - numpy
