@@ -12,7 +12,9 @@ dependencies:
   - numpy
   - obstore
   - pandas
+  - pystac
   - rasterio
+  - rustac
   - scipy
   - virtualizarr
   - xarray
