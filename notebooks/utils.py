@@ -26,7 +26,6 @@ def gdal_env(**kwargs) -> rasterio.Env:
     return rasterio.Env(
         AWS_S3_ENDPOINT=ENDPOINT_URL,
         AWS_VIRTUAL_HOSTING=False,
-        GDAL_DISABLE_READDIR_ON_OPEN="EMPTY_DIR",
         **kwargs,
     )
 
