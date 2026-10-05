@@ -1,0 +1,11 @@
+.reveal section.centered-title h2 { text-align: center; }
+
+/* Row of columns filling the space below the title, content centered */
+.reveal .columns.centered { display: flex; align-items: center; justify-content: center; height: 500px; }
+
+.reveal .centered { text-align: center; vertical-align: middle; }
+
+.reveal #title-slide .title { font-size: 1.8em; }
+
+/* Cover photo credit, bottom-left corner of the title slide */
+.reveal .backgrounds > .slide-background:first-child::after { content: "Photo by Sebastiaan Stam on Unsplash"; position: absolute; left: 12px; bottom: 10px; font-size: 20px; opacity: 0.7; }
