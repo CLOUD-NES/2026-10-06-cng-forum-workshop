@@ -29,6 +29,7 @@ date: 2026-10-06
 - More than just "put it in a bucket".
 - Formats designed for local filesystems often perform poorly in the cloud.
 - Key difference: data is accessed via HTTP range requests → latency, not throughput, is often the bottleneck.
+- But also cloud-optimized formats can perform poorly if not well configured!
 
 ## This workshop
 
