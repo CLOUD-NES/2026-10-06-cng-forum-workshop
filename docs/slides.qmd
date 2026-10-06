@@ -47,6 +47,23 @@ Starting from real-world datasets, we'll try to answer:
 * Publish the converted datasets as a STAC catalog.
 :::
 
+## Infrastructure for today
+
+:::: {.columns .centered}
+
+::: {.column .centered width="49%"}
+![](fig/s3-logo.png){height=200}
+
+Object store
+:::
+
+::: {.column .centered width="49%"}
+![](fig/jupyter-logo.png){height=200}
+
+JupyterHub
+:::
+::::
+
 ## {.center .centered}
 
 CLOUD-NES aims to investigate and promote cloud-native research data practices in the Natural and Engineering Sciences (NES).
@@ -66,23 +83,6 @@ CLOUD-NES aims to investigate and promote cloud-native research data practices i
 ::: {.footer style="max-width: 80%; left: 0; right: 0;"}
 The project "CLOUD-NES" with file number ICT.001.TDCC.016 of the research programme NWO Thematic Digital Competence Centers (TDCCs) 2023-2 is financed by the Dutch Research Council (NWO).
 :::
-
-## Infrastructure for today
-
-:::: {.columns .centered}
-
-::: {.column .centered width="49%"}
-![](fig/s3-logo.png){height=200}
-
-Object store
-:::
-
-::: {.column .centered width="49%"}
-![](fig/jupyter-logo.png){height=200}
-
-JupyterHub
-:::
-::::
 
 ## {.center .centered}
 
