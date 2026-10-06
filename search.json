@@ -4,7 +4,7 @@
     "href": "slides.html#cloud-native",
     "title": "Building and Benchmarking Cloud-Optimized Geospatial Raster and Tensor Datasets",
     "section": "Cloud-native",
-    "text": "Cloud-native\n\nMore than just “put it in a bucket”.\nFormats designed for local filesystems often perform poorly in the cloud.\nKey difference: data is accessed via HTTP range requests → latency, not throughput, is often the bottleneck."
+    "text": "Cloud-native\n\nMore than just “put it in a bucket”.\nFormats designed for local filesystems often perform poorly in the cloud.\nKey difference: data is accessed via HTTP range requests → latency, not throughput, is often the bottleneck.\nBut also cloud-optimized formats can perform poorly if not well configured!"
   },
   {
     "objectID": "slides.html#this-workshop",
