@@ -21,18 +21,18 @@
     "text": "In practice\n\nExplore two raster datasets and one tensor dataset in their original formats.\nConvert them to cloud-optimized formats (COG and Zarr) with different configurations, and upload them to an object store.\nBenchmark them against the original formats across different access patterns.\nPublish the converted datasets as a STAC catalog."
   },
   {
-    "objectID": "slides.html#section",
-    "href": "slides.html#section",
-    "title": "Building and Benchmarking Cloud-Optimized Geospatial Raster and Tensor Datasets",
-    "section": "",
-    "text": "CLOUD-NES aims to investigate and promote cloud-native research data practices in the Natural and Engineering Sciences (NES).\n\n\n\n\n\n\ncloudnes.org\n\nThe project “CLOUD-NES” with file number ICT.001.TDCC.016 of the research programme NWO Thematic Digital Competence Centers (TDCCs) 2023-2 is financed by the Dutch Research Council (NWO)."
-  },
-  {
     "objectID": "slides.html#infrastructure-for-today",
     "href": "slides.html#infrastructure-for-today",
     "title": "Building and Benchmarking Cloud-Optimized Geospatial Raster and Tensor Datasets",
     "section": "Infrastructure for today",
     "text": "Infrastructure for today\n\n\n\nObject store\n\n\nJupyterHub"
+  },
+  {
+    "objectID": "slides.html#section",
+    "href": "slides.html#section",
+    "title": "Building and Benchmarking Cloud-Optimized Geospatial Raster and Tensor Datasets",
+    "section": "",
+    "text": "CLOUD-NES aims to investigate and promote cloud-native research data practices in the Natural and Engineering Sciences (NES).\n\n\n\n\n\n\ncloudnes.org\n\nThe project “CLOUD-NES” with file number ICT.001.TDCC.016 of the research programme NWO Thematic Digital Competence Centers (TDCCs) 2023-2 is financed by the Dutch Research Council (NWO)."
   },
   {
     "objectID": "slides.html#section-1",
